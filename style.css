@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  --bg-color: #f3f4f6;
+  --white: #ffffff;
+  --accent: #111827;
+  --border-color: #e5e7eb;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-primary: #f3f4f6;
+    --text-secondary: #9ca3af;
+    --bg-color: #111827;
+    --white: #1f2937;
+    --accent: #f9fafb;
+    --border-color: #374151;
+  }
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: "Satoshi", sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+main {
+  background-color: var(--white);
+  max-width: 50rem;
+  margin: 3rem auto;
+  padding: 4rem 5rem;
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  main {
+    margin: 0;
+    padding: 2rem 1.5rem;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Bevellier", serif;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--accent);
+}
+
+main > header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+main > header h1 {
+  font-size: 2.5rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+}
+
+main > header h2 {
+  font-family: "Satoshi", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.02em;
+}
+
+main > header p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+a {
+  color: var(--text-primary);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border-color);
+  transition: border-color 0.2s ease;
+}
+
+a:hover {
+  border-bottom: 1px solid var(--text-primary);
+}
+
+section {
+  margin-bottom: 2.5rem;
+}
+
+section:last-child {
+  margin-bottom: 0;
+}
+
+section h2 {
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--border-color);
+  color: var(--accent);
+}
+
+article {
+  margin-bottom: 1.5rem;
+}
+
+article:last-child {
+  margin-bottom: 0;
+}
+
+article header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+  row-gap: 0.25rem;
+}
+
+article h3 {
+  font-family: "Satoshi", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+article h3 strong {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--accent);
+}
+
+article header p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+article header p em {
+  font-style: normal;
+}
+
+ul {
+  padding-left: 1.25rem;
+  color: var(--text-secondary);
+}
+
+ul li {
+  margin-bottom: 0.4rem;
+}
+
+ul li strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Print Styles - For "Save as PDF" */
+@media print {
+  :root {
+    --text-primary: #000000;
+    --text-secondary: #333333;
+    --bg-color: #ffffff;
+    --white: #ffffff;
+    --accent: #000000;
+    --border-color: #cccccc;
+  }
+
+  body {
+    background-color: var(--white);
+    font-size: 9.5pt;
+    line-height: 1.35;
+  }
+
+  main {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    max-width: 100%;
+  }
+
+  main > header {
+    margin-bottom: 1rem;
+  }
+
+  main > header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0;
+  }
+
+  main > header h2 {
+    font-size: 1.05rem;
+    margin-bottom: 0.15rem;
+  }
+
+  section {
+    margin-bottom: 0.75rem;
+  }
+
+  section h2 {
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+    padding-bottom: 0.1rem;
+    border-bottom-width: 1px;
+  }
+
+  article {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    margin-bottom: 0.5rem;
+  }
+
+  article header {
+    margin-bottom: 0.15rem;
+  }
+
+  article h3 {
+    font-size: 0.95pt; /* Wait, using pt here is confusing if it was rem outside */
+    /* Let's keep it to rem matching body font size */
+  }
+
+  article h3 {
+    font-size: 1rem;
+  }
+
+  article h3 strong {
+    font-size: 1.05rem;
+  }
+
+  article header p {
+    font-size: 0.85rem;
+  }
+
+  ul {
+    padding-left: 1.25rem;
+  }
+
+  ul li {
+    margin-bottom: 0.15rem;
+  }
+
+  p {
+    margin-bottom: 0.2rem;
+  }
+
+  a {
+    border-bottom: none;
+    text-decoration: none;
+    color: var(--text-primary);
+  }
+
+  section ul li a {
+    display: none;
+  }
+}
