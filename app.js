@@ -67,9 +67,9 @@ async function loadDigitalCV() {
         }
 
         // 5. Projects Section (Handles inline links and bold descriptions)
-        if (db.projects) {
-            const container = document.getElementById('projects-container');
-            container.innerHTML = db.projects.split('\n')
+        if (db.interest) {
+            const container = document.getElementById('interest-container');
+            container.innerHTML = db.interest.split('\n')
                 .filter(l => l.trim().startsWith('*'))
                 .map(l => {
                     const parts = l.replace('*', '').split('|').map(p => p.trim());
