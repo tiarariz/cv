@@ -1,38 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <title>Digital Resume</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Fathoni Utomo - Resume</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <main>
+      <header class="resume-header">
+        <div class="header-main">
+          <h1 id="resume-name">Loading...</h1>
+          <h2 id="resume-title"></h2>
+        </div>
+        <div class="header-contact">
+          <ul id="resume-contact"></ul>
+        </div>
+      </header>
 
-  <!-- Your planned schema -->
-  <header>
-    <h1 id="resume-name">Loading...</h1>
-    <p id="resume-position"></p>
-  </header>
+      <section>
+        <h2>SUMMARY</h2>
+        <p id="resume-summary"></p>
+      </section>
 
-  <main>
-    <section>
-      <h3>About Me</h3>
-      <p id="resume-summary"></p>
-    </section>
+      <section>
+        <h2>EXPERIENCE</h2>
+        <div id="experience-container"></div>
+      </section>
 
-    <section>
-      <h3>Core Skills</h3>
-      <ul id="resume-skills"></ul>
-    </section>
+      <section>
+        <h2>PROJECTS</h2>
+        <ul id="projects-container"></ul>
+      </section>
 
-    <section>
-      <h3>Work Experience</h3>
-      <div id="experience-container">Loading experience...</div>
-    </section>
-  </main>
+      <section>
+        <h2>EDUCATION</h2>
+        <div id="education-container"></div>
+      </section>
 
-  <script src="script.js"></script>
+      <section>
+        <h2>TECHNICAL SKILLS</h2>
+        <ul id="skills-container"></ul>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
 </body>
-
 </html>
