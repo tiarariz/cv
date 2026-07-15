@@ -3,8 +3,6 @@ name: Deploy Static Content to Pages
 on:
   push:
     branches: ["main"] # Change to your branch name if different
-    paths-ignore:
-      - 'resume.md'  # Prevents deployment when only this file changes
 
 permissions:
   contents: read
