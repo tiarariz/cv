@@ -10,10 +10,10 @@ Guru | Tutor Fisika
 * linkedin.com/in/tiararizkiannisa | https://linkedin.com/in/tiararizkiannisa
 
 # Experience
-### Edulab | Tutor Fisika (Freelance) | Jul 2025 - Sekarang
+### Edulab | Tutor Fisika (Freelance) | Jul 2026 - Sekarang
 * Mengajar mata pelajaran Fisika mengikuti teknik standar pengajar perusahaan.
 
-### Kuadran Co | Quiz Contributor (Freelance) | Jul 2025 - Sekarang, Sep 2024 – Feb 2025
+### Kuadran Co | Quiz Contributor (Freelance) | Jul 2026 - Sekarang, Sep 2024 – Feb 2025
 * Menyusun soal asesmen literasi dan numerasi berjenjang dengan target produksi yang ketat.
 
 ### SMKS Al Hidayah Kota Cirebon | Guru Fisika | Jul 2025 – Sekarang
