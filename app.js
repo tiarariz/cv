@@ -28,11 +28,11 @@ async function renderCV() {
     document.getElementById('resume-contact').innerHTML = `
     <li>${p.location}</li>
     <li><a href="mailto:${p.email}">${p.email}</a></li>
-    <li><a href="${p.linkedin}">@linkedin</a></li>
+    <li><a href="${p.linkedin}">LinkedIn</a></li>
   `;
 
     // 2. Render Experience
-    document.getElementById('experience-container').innerHTML = expData.map(job => `
+    document.getElementById('experience-container').innerHTML = expData.reverse().map(job => `
     <article>
       <header>
         <h3><strong>${job.company}</strong> | ${job.role}</h3>
