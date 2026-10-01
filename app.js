@@ -24,11 +24,12 @@ async function renderCV() {
     // 1. Render Profile
     const p = profileData[0];
     document.getElementById('resume-name').textContent = p.name;
-    document.getElementById('resume-title').textContent = p.roles;
+    document.getElementById('resume-title').textContent = p.role;
     document.getElementById('resume-contact').innerHTML = `
     <li>${p.location}</li>
     <li><a href="mailto:${p.email}">${p.email}</a></li>
     <li><a href="${p.linkedin}">LinkedIn</a></li>
+    <li><a href="${p.social}">TikTok</a></li>
   `;
 
     // 2. Render Experience
